@@ -1,6 +1,0 @@
-ECHO ist eingeschaltet (ON).
-<<<<<<< HEAD
-Zarko loves chelli
-=======
-Ben Daniels
->>>>>>> 963a01ae0aa5b6cb883e601fd7248d62df885585
