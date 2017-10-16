@@ -1,7 +1,9 @@
-package service; /**
+package service;
+/**
  * Created by ben_d on 16.10.2017.
  */
 
+import android.Manifest;
 import android.util.Log;
 
 import com.google.gson.reflect.TypeToken;
@@ -14,7 +16,9 @@ import domain.Gadget;
 import domain.Loan;
 import domain.Reservation;
 
+
 public class LibraryService {
+
 
     private static final String TAG = LibraryService.class.getSimpleName();
     private static LoginToken token;
