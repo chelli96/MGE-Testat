@@ -35,22 +35,22 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:textColorHint="#FFFFFF"
-            android:textStyle="bold" />
-
-        <EditText
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="E-Mail Adresse"
             android:inputType="textEmailAddress"
+            android:textColorHint="#FFFFFF"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
             android:textColorHint="#FFFFFF"
             android:textStyle="bold" />
 
@@ -71,7 +71,7 @@
             app:layout_constraintVertical_bias="0.183" />
 
         <TextView
-            android:id="@+id/Registrieren"
+            android:id="@+id/registrieren"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -83,11 +83,8 @@
             android:text="Noch keinen Account? Hier registieren!"
             android:textColor="#FFFFFF"
             android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-            app:layout_constraintVertical_bias="0.403" />
+            android:onClick="onClick"
+            android:clickable="true"/>
 
 
     </LinearLayout>
