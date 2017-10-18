@@ -1,3 +1,5 @@
+package com.example.ben_d.minipro;
+
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 

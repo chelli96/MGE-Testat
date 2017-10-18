@@ -10,15 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <uses-permission android:name="android.permission.INTERNET"/>
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity
+            android:name="com.example.ben_d.minipro.LoginActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <activity android:name=".LoginActivity"></activity>
-            <activity android:name=".RegistrationActivity"></activity>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
+
+        <activity
+            android:name=".MainActivity">
+        </activity>
+
+            <activity
+                android:name="com.example.ben_d.minipro.RegistrationActivity"
+                android:label="Minipro"
+                >
+            </activity>
+
     </application>
 
 </manifest>

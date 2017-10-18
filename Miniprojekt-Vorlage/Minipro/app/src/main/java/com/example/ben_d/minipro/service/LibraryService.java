@@ -1,9 +1,8 @@
-package service;
+package com.example.ben_d.minipro.service;
 /**
  * Created by ben_d on 16.10.2017.
  */
 
-import android.Manifest;
 import android.util.Log;
 
 import com.google.gson.reflect.TypeToken;
@@ -12,9 +11,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import domain.Gadget;
-import domain.Loan;
-import domain.Reservation;
+import com.example.ben_d.minipro.domain.Gadget;
+import com.example.ben_d.minipro.domain.Loan;
+import com.example.ben_d.minipro.domain.Reservation;
 
 
 public class LibraryService {

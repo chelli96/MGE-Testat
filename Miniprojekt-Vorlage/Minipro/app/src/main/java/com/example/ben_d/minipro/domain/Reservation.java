@@ -1,4 +1,4 @@
-package domain; /**
+package com.example.ben_d.minipro.domain; /**
  * Created by ben_d on 16.10.2017.
  */
 

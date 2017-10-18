@@ -20,59 +20,59 @@
          />
 
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/NeuerName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textColor="#FFFFFF"
         android:text="Dein Name"
-        android:layout_marginBottom="4dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"/>
+        android:textColor="#FFFFFF" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/NeueEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
         android:ems="10"
-        android:textColorHint="#FFFFFF"
         android:hint="Ihre HSR-Mail Adresse"
         android:inputType="textEmailAddress"
-        android:layout_marginBottom="4dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"/>/>
+        android:textColorHint="#FFFFFF" />/>
 
     <EditText
-        android:id="@+id/Matrikelnummer"
+        android:id="@+id/NeueMatrikelnummer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
         android:ems="10"
-        android:textColorHint="#FFFFFF"
         android:hint="Ihre Martrikelnummer"
         android:inputType="number"
-        android:layout_marginBottom="4dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"/>
+        android:textColorHint="#FFFFFF" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/NeuesPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
         android:ems="10"
-        android:textColorHint="#FFFFFF"
         android:hint="Ihr Passwort eingeben"
         android:inputType="textPassword"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"/>
+        android:textColorHint="#FFFFFF" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/neuRegistrieren"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -85,6 +85,7 @@
 
     <TextView
 
+        android:id="@+id/backToLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -95,6 +96,7 @@
         android:layout_marginTop="80dp"
         android:text="Sie sind schon registiert? Hier geht's zum Login!"
         android:textColor="#FFFFFF"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        android:clickable="true" />
 
 </LinearLayout>
