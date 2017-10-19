@@ -28,9 +28,9 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
         android:ems="10"
+        android:hint="Ihr Name"
         android:inputType="textPersonName"
-        android:text="Dein Name"
-        android:textColor="#FFFFFF" />
+        android:textColorHint="#FFFFFF" />
 
     <EditText
         android:id="@+id/NeueEmail"
@@ -43,7 +43,7 @@
         android:ems="10"
         android:hint="Ihre HSR-Mail Adresse"
         android:inputType="textEmailAddress"
-        android:textColorHint="#FFFFFF" />/>
+        android:textColorHint="#FFFFFF" />
 
     <EditText
         android:id="@+id/NeueMatrikelnummer"
