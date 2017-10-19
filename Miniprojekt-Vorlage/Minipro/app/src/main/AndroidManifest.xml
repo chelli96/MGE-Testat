@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <uses-permission android:name="android.permission.INTERNET"/>
         <activity
             android:name="com.example.ben_d.minipro.LoginActivity">
@@ -24,10 +25,12 @@
         </activity>
 
             <activity
-                android:name="com.example.ben_d.minipro.RegistrationActivity"
-                android:label="Minipro"
-                >
+                android:name="com.example.ben_d.minipro.RegistrationActivity">
             </activity>
+
+        <activity
+            android:name="com.example.ben_d.minipro.GadothekActivity">
+        </activity>
 
     </application>
 

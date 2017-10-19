@@ -18,8 +18,6 @@ import com.example.ben_d.minipro.service.LibraryService;
 public class LoginActivity extends AppCompatActivity {
 
 
-    private boolean isLoginOnProgress = false;
-
     private EditText Mail;
     private EditText Password;
     private Button   SignIn;
@@ -37,18 +35,13 @@ public class LoginActivity extends AppCompatActivity {
         SignIn = (Button)findViewById(R.id.login);
         Registration = (TextView)findViewById(R.id.registrieren);
 
-       /* setContentView(SignIn);
-        SignIn = (Button)findViewById(R.id.login);
-
-
-        Registration = (TextView) findViewById(R.id.registrieren);
-        SignIn.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.login).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), com.example.ben_d.minipro.RegistrationActivity.class);
-                startActivity(myIntent);
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this,GadothekActivity.class);
+                startActivity(intent);
             }
-        });*/
+        });
 
 
         findViewById(R.id.registrieren).setOnClickListener(new View.OnClickListener() {
