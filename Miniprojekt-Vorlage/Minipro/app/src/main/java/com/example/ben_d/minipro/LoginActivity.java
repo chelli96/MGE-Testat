@@ -51,47 +51,49 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+    }
+    public boolean validate(){
+
+        boolean valid = true;
+
+        final String email = Mail.getText().toString();
+        final String password = Password.getText().toString();
+
+        if (email.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            Mail.setError("enter a valid email address");
+            valid = false;
+        } else {
+            Mail.setError(null);
+        }
+
+        if (password.isEmpty() || password.length() < 4 ) {
+            Password.setError("at least 4 characters");
+            valid = false;
+        } else {
+            Password.setError(null);
+        }
+
+        return valid;
     }
 
     private void tryToLogin() {
 
-        boolean abbrechen = false;
-        View findError = null;
+        final String email = Mail.getText().toString();
+        final String password = Password.getText().toString();
 
-         final String email = Mail.getText().toString();
-         final String password = Password.getText().toString();
+        if(validate())
+            LibraryService.login(email, password, new Callback<Boolean>() {
+                @Override
+                public void onCompletion(Boolean input) {
+                    erfolgreicheAnmeldung(input);
+                }
 
-        // Passwort darf nicht leer sein
-        if (password.isEmpty()) {
-            Password.setError("Diese Feld muss ausgefüllt sein");
-            findError = Password;
-            abbrechen = true;
-        }
-            // Email Adresse überprüfen
-            if (email.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(email).matches())   {
-                Mail.setError("Ungültige E-Mail Adresse");
-                findError = Mail;
-                abbrechen = true;
-            }
-        if(abbrechen) {
-                    //Fehlermeldung ausgeben
-                    findError.requestFocus();
-                    }
-
-            else {
-                        LibraryService.login(email, password, new Callback<Boolean>() {
-                            @Override
-                            public void onCompletion(Boolean input) {
-                                erfolgreicheAnmeldung(input);
-                            }
-
-                            @Override
-                            public void onError(String message) {
-                                fehlerhafterLogin(message);
-                            }
-                        });
-
-            }
+                @Override
+                public void onError(String message) {
+                    fehlerhafterLogin(message);
+                }
+            });
     }
 
     private void erfolgreicheAnmeldung(Boolean success){
@@ -99,9 +101,6 @@ public class LoginActivity extends AppCompatActivity {
         if (success) {
             Intent intent = new Intent(LoginActivity.this, GadothekActivity.class);
             startActivity(intent);
-        } else {
-            Password.setError("Fehler");
-            Password.requestFocus();
         }
     }
 
