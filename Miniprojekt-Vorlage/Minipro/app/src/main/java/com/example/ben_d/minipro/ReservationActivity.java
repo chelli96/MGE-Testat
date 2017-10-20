@@ -17,7 +17,7 @@ public class ReservationActivity {
         LibraryService.getReservationsForCustomer(new Callback<List<Reservation>>() {
             @Override
             public void onCompletion(List<Reservation> input) {
-            
+
             }
 
             @Override

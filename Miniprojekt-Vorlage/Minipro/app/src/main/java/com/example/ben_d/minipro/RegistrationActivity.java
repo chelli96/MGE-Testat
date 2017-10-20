@@ -24,7 +24,6 @@ public class RegistrationActivity extends AppCompatActivity {
     private EditText NewMail;
     private EditText NewPassword;
     private EditText NewNumber;
-    private Button Registrarion;
 
 
     @Override
@@ -109,6 +108,7 @@ public class RegistrationActivity extends AppCompatActivity {
                     fehlerhafteRegistierung(message);
                 }
             });
+
         }
     }
 
@@ -117,7 +117,6 @@ public class RegistrationActivity extends AppCompatActivity {
         if (success) {
             Intent intent = new Intent(RegistrationActivity.this, LoginActivity.class);
             startActivity(intent);
-        } else {
         }
     }
 
