@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/step1">
+    android:layout_height="match_parent">
 
 
     <TextView
@@ -11,7 +10,6 @@
         android:layout_height="wrap_content"
         android:text="Registration"
         android:textSize="27sp"
-        android:textColor="#FFFFFF"
         android:layout_marginBottom="4dp"
         android:layout_marginTop="8dp"
         android:layout_marginStart="4dp"
@@ -29,8 +27,7 @@
         android:layout_marginTop="4dp"
         android:ems="10"
         android:hint="Ihr Name"
-        android:inputType="textPersonName"
-        android:textColorHint="#FFFFFF" />
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/NeueEmail"
@@ -42,8 +39,7 @@
         android:layout_marginTop="4dp"
         android:ems="10"
         android:hint="Ihre HSR-Mail Adresse"
-        android:inputType="textEmailAddress"
-        android:textColorHint="#FFFFFF" />
+        android:inputType="textEmailAddress" />
 
     <EditText
         android:id="@+id/NeueMatrikelnummer"
@@ -55,8 +51,7 @@
         android:layout_marginTop="4dp"
         android:ems="10"
         android:hint="Ihre Martrikelnummer"
-        android:inputType="number"
-        android:textColorHint="#FFFFFF" />
+        android:inputType="number" />
 
     <EditText
         android:id="@+id/NeuesPassword"
@@ -68,8 +63,7 @@
         android:layout_marginTop="4dp"
         android:ems="10"
         android:hint="Ihr Passwort eingeben"
-        android:inputType="textPassword"
-        android:textColorHint="#FFFFFF" />
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/neuRegistrieren"
@@ -95,7 +89,6 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="80dp"
         android:text="Sie sind schon registiert? Hier geht's zum Login!"
-        android:textColor="#FFFFFF"
         android:textSize="15sp"
         android:clickable="true" />
 

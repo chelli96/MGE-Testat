@@ -20,12 +20,12 @@ public class GadothekActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gadothek);
 
-       Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+       //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
        // setSupportActionBar(toolbar);
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new ListFragment(), "LOAN");
+        adapter.addFragment(new ListFragment(), "MY LOANS");
         adapter.addFragment(new ListFragment(), "RESERVATION");
         viewPager.setAdapter(adapter);
 

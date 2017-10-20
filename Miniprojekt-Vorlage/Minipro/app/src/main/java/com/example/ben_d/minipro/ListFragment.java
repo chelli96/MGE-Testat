@@ -17,7 +17,7 @@ public class ListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         RecyclerView recyclerView = (RecyclerView) inflater.inflate(
                 R.layout.dummy_fragment, container, false);
-        //setupRecyclerView(recyclerView);
+        setupRecyclerView(recyclerView);
         return recyclerView;
     }
 
