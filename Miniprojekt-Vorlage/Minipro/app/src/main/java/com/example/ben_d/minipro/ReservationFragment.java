@@ -11,12 +11,12 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListFragment extends Fragment {
+public class ReservationFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         RecyclerView recyclerView = (RecyclerView) inflater.inflate(
-                R.layout.dummy_fragment, container, false);
+                R.layout.reservation_fragment, container, false);
         setupRecyclerView(recyclerView);
         return recyclerView;
     }
@@ -27,10 +27,11 @@ public class ListFragment extends Fragment {
         recyclerView.setAdapter(recyclerAdapter);
     }
 
+
     private List<String> createItemList() {
         List<String> itemList = new ArrayList<>();
-        for (int i = 1; i <= 20; i++) {
-            itemList.add("Item No. " + i);
+        for (int i = 1; i <= 5; i++) {
+            itemList.add("Reservation" + i);
         }
         return itemList;
     }

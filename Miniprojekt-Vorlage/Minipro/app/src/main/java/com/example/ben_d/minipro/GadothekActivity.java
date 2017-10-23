@@ -2,12 +2,8 @@ package com.example.ben_d.minipro;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.ListFragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-
-import com.example.ben_d.minipro.R;
 
 /**
  * Created by kelle on 18.10.2017.
@@ -25,8 +21,8 @@ public class GadothekActivity extends AppCompatActivity {
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new ListFragment(), "MY LOANS");
-        adapter.addFragment(new ListFragment(), "RESERVATION");
+        adapter.addFragment(new LoanFragment(), "MY LOANS");
+        adapter.addFragment(new ReservationFragment(), "RESERVATION");
         viewPager.setAdapter(adapter);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);

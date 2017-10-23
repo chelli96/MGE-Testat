@@ -37,6 +37,7 @@
             android:ems="10"
             android:hint="E-Mail Adresse"
             android:inputType="textEmailAddress"
+            android:text="test@example.com"
             android:textStyle="bold" />
 
         <EditText
@@ -46,6 +47,7 @@
             android:ems="10"
             android:hint="Password"
             android:inputType="textPassword"
+            android:text="kaugummi"
             android:textStyle="bold" />
 
         <Button
