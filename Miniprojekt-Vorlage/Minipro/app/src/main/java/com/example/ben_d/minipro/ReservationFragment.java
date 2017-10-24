@@ -27,11 +27,10 @@ public class ReservationFragment extends Fragment {
         recyclerView.setAdapter(recyclerAdapter);
     }
 
-
     private List<String> createItemList() {
         List<String> itemList = new ArrayList<>();
         for (int i = 1; i <= 5; i++) {
-            itemList.add("Reservation" + i);
+            itemList.add("Reservation " + i);
         }
         return itemList;
     }
