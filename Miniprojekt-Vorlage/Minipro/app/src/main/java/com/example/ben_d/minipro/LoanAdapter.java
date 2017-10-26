@@ -1,6 +1,7 @@
 package com.example.ben_d.minipro;
 
 import android.support.v7.widget.RecyclerView;
+import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,22 +31,25 @@ public class LoanAdapter extends RecyclerView.Adapter<LoanViewHolder> {
         return new LoanViewHolder(v, gadgetName, loanDate);
     }
 
+
     @Override
     public void onBindViewHolder(LoanViewHolder holder, int position) {
         if(dataset.isEmpty()){
            // holder.emptyView.setVisibility(View.VISIBLE);
         }else {
             final Loan loan = dataset.get(position);
-            SimpleDateFormat dateFormat = new SimpleDateFormat("dd.mm.yyyy");
 
             holder.gadgetName.setText(loan.getGadget().getName());
 
-            Date returnDate = loan.getReturnDate();
-            if (returnDate != null) {
-                holder.loanDate.setText(dateFormat.format(loan.getReturnDate()).toString());
-            }else{
+            Date returnDate = loan.overDueDate();
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd.mm.yyyy");
 
-            }
+
+            if (returnDate != null) {
+                holder.loanDate.setText(dateFormat.format(loan.overDueDate()));
+            }else{
+                holder.loanDate.setText("Wir haben ein Problem");
+           }
         }
     }
 
