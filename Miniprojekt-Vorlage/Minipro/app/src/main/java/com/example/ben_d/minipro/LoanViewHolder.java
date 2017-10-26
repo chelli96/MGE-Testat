@@ -19,4 +19,5 @@ public class LoanViewHolder extends RecyclerView.ViewHolder {
         this.gadgetName = gadgetName;
         this.loanDate = loanDate;
     }
+
 }

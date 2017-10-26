@@ -21,15 +21,19 @@
         </activity>
 
         <activity
-            android:name=".MainActivity">
-        </activity>
-
-            <activity
-                android:name="com.example.ben_d.minipro.RegistrationActivity">
-            </activity>
+        android:name="com.example.ben_d.minipro.RegistrationActivity" android:parentActivityName=".LoginActivity">
+    </activity>
 
         <activity
-            android:name="com.example.ben_d.minipro.GadothekActivity">
+            android:name="com.example.ben_d.minipro.HomeActivity">
+        </activity>
+
+        <activity
+            android:name="com.example.ben_d.minipro.LoanActivity" android:parentActivityName=".HomeActivity" android:label="loans">
+        </activity>
+
+        <activity
+            android:name="com.example.ben_d.minipro.ReservationActivity" android:parentActivityName=".HomeActivity" android:label="reservations">
         </activity>
 
     </application>

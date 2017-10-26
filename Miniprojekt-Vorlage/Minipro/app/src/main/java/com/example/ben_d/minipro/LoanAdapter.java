@@ -10,12 +10,16 @@ import com.example.ben_d.minipro.domain.Loan;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
-public class LoanAdapter extends RecyclerView.Adapter<LoanViewHolder>{
-    private ArrayList<Loan> dataset;
+public class LoanAdapter extends RecyclerView.Adapter<LoanViewHolder> {
 
-    public LoanAdapter(ArrayList<Loan> loans) {dataset = loans;}
+    private List<Loan> dataset;
 
+    public  LoanAdapter(){
+        this.dataset = new ArrayList<>();
+    }
 
     @Override
     public LoanViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -28,18 +32,29 @@ public class LoanAdapter extends RecyclerView.Adapter<LoanViewHolder>{
 
     @Override
     public void onBindViewHolder(LoanViewHolder holder, int position) {
-        final Loan loan = dataset.get(position);
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd.mm.yyyy");
+        if(dataset.isEmpty()){
+           // holder.emptyView.setVisibility(View.VISIBLE);
+        }else {
+            final Loan loan = dataset.get(position);
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd.mm.yyyy");
 
-        holder.gadgetName.setText(loan.getGadget().getName());
+            holder.gadgetName.setText(loan.getGadget().getName());
 
-        holder.loanDate.setText(dateFormat.format(loan.getReturnDate()));
+            Date returnDate = loan.getReturnDate();
+            if (returnDate != null) {
+                holder.loanDate.setText(dateFormat.format(loan.getReturnDate()).toString());
+            }else{
 
+            }
+        }
     }
-
 
     @Override
-    public int getItemCount() {
-        return dataset.size();
+    public int getItemCount() { return dataset.size(); }
+
+    public void setDataSet(List<Loan> dataset){
+        this.dataset = dataset;
     }
+
+
 }
