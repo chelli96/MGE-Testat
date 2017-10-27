@@ -45,6 +45,8 @@ public class LoanAdapter extends RecyclerView.Adapter<LoanViewHolder> {
                 holder.loanDate.setText(dateFormat.format(loan.getReturnDate()).toString());
             }else{
 
+
+
             }
         }
     }

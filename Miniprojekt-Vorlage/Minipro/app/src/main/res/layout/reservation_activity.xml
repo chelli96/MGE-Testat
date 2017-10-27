@@ -28,10 +28,12 @@
         android:layout_margin="10dp"/>
 
     <TextView
+        android:id="@+id/empty"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:visibility="gone"
         android:text="The reservation list is empty. Please first make your reservations"/>
+
 
 </RelativeLayout>
