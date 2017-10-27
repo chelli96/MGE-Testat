@@ -3,6 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Minipro.iml" filepath="$PROJECT_DIR$/Minipro.iml" />
+<<<<<<< HEAD
+      <module fileurl="file://$PROJECT_DIR$/Minipro - buttons.iml" filepath="$PROJECT_DIR$/Minipro - buttons.iml" />
+=======
+>>>>>>> 08d07bd2ca612b428c77fb0d4a00c4c0cc0a807a
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
