@@ -13,8 +13,6 @@ public class Reservation {
     private int watingPosition;
     private boolean isReady;
 
-
-
     public String getReservationId() {
         return id;
     }
