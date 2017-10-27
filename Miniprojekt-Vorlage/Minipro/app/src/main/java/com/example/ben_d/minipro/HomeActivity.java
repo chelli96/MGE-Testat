@@ -20,7 +20,8 @@ public class HomeActivity extends AppCompatActivity {
     private ImageButton reservation;
 
     private final String token = "token";
-    private final String customer = "customer";
+    private final String user = "user";
+
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,7 +81,7 @@ public class HomeActivity extends AppCompatActivity {
         SharedPreferences sharedPreferencesLogin = getSharedPreferences("Login", MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferencesLogin.edit();
         editor.putString(token, null);
-        editor.putString(customer, null);
+        editor.putString(user, null);
         editor.commit();
     }
 
