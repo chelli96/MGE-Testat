@@ -12,7 +12,8 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name="com.example.ben_d.minipro.LoginActivity">
+            android:name="com.example.ben_d.minipro.LoginActivity" android:screenOrientation="portrait">
+
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
@@ -21,20 +22,25 @@
         </activity>
 
         <activity
-        android:name="com.example.ben_d.minipro.RegistrationActivity" android:parentActivityName=".LoginActivity">
+        android:name="com.example.ben_d.minipro.RegistrationActivity" android:parentActivityName=".LoginActivity"
+            android:screenOrientation="portrait">
     </activity>
 
         <activity
-            android:name="com.example.ben_d.minipro.HomeActivity">
+            android:name="com.example.ben_d.minipro.HomeActivity"
+            android:screenOrientation="portrait">
         </activity>
 
         <activity
-            android:name="com.example.ben_d.minipro.LoanActivity" android:parentActivityName=".HomeActivity" android:label="loans">
+            android:name="com.example.ben_d.minipro.LoanActivity" android:parentActivityName=".HomeActivity"
+            android:label="loans" android:screenOrientation="portrait">
         </activity>
 
         <activity
-            android:name="com.example.ben_d.minipro.ReservationActivity" android:parentActivityName=".HomeActivity" android:label="reservations">
+            android:name="com.example.ben_d.minipro.ReservationActivity" android:parentActivityName=".HomeActivity"
+            android:label="reservations" android:screenOrientation="portrait">
         </activity>
+
 
     </application>
 

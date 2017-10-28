@@ -17,7 +17,7 @@ public class LoanAdapter extends RecyclerView.Adapter<LoanViewHolder> {
 
     private List<Loan> dataset;
 
-    public  LoanAdapter(){
+    public LoanAdapter() {
         this.dataset = new ArrayList<>();
     }
 
@@ -33,9 +33,9 @@ public class LoanAdapter extends RecyclerView.Adapter<LoanViewHolder> {
 
     @Override
     public void onBindViewHolder(LoanViewHolder holder, int position) {
-        if(dataset.isEmpty()){
-           // holder.emptyView.setVisibility(View.VISIBLE);
-        }else {
+        if (dataset.isEmpty()) {
+            // holder.emptyView.setVisibility(View.VISIBLE);
+        } else {
             final Loan loan = dataset.get(position);
 
             holder.gadgetName.setText(loan.getGadget().getName());
@@ -46,27 +46,22 @@ public class LoanAdapter extends RecyclerView.Adapter<LoanViewHolder> {
 
             if (returnDate != null) {
                 holder.loanDate.setText(dateFormat.format(loan.overDueDate()));
-            }else{
-
-
-
+            } else {
 
 
                 holder.loanDate.setText("Datum konnte nicht geladen werden");
 
             }
-
-           }
-
         }
-
-
+    }
     @Override
-    public int getItemCount() { return dataset.size(); }
-
-    public void setDataSet(List<Loan> dataset){
-        this.dataset = dataset;
+    public int getItemCount() {
+        return dataset.size();
     }
 
-
+    public void setDataSet(List<Loan> dataset) {
+        this.dataset = dataset;
+    }
 }
+
+

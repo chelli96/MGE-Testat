@@ -6,9 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.ben_d.minipro.domain.Gadget;
 import com.example.ben_d.minipro.domain.Reservation;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ReservationAdapter extends RecyclerView.Adapter<ReservationViewHolder> {
     private ArrayList<Reservation> dataset;
@@ -36,6 +38,18 @@ public class ReservationAdapter extends RecyclerView.Adapter<ReservationViewHold
     @Override
     public int getItemCount() {
         return dataset.size();
+    }
+
+    public static String[] getGadgetsForDialog(List<Gadget> gadgets) {
+        List<String> gadgetsList = new ArrayList<>();
+        for (Gadget g : gadgets) {
+            gadgetsList.add(g.getName() + " - " + g.getCondition());
+        }
+        return gadgetsList.toArray(new String[gadgets.size()]);
+    }
+
+    public static String formatPrice(double price){
+        return String.format("Fr. %.2f", price);
     }
 }
 
