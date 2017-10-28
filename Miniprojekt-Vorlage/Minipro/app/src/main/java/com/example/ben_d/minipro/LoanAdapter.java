@@ -47,27 +47,19 @@ public class LoanAdapter extends RecyclerView.Adapter<LoanViewHolder> {
             if (returnDate != null) {
                 holder.loanDate.setText(dateFormat.format(loan.overDueDate()));
             }else{
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 08d07bd2ca612b428c77fb0d4a00c4c0cc0a807a
+
+
 
                 holder.loanDate.setText("Datum konnte nicht geladen werden");
 
             }
 
-<<<<<<< HEAD
-                holder.loanDate.setText("Wir haben ein Problem");
            }
 
         }
 
-=======
-           }
-
-        }
->>>>>>> 08d07bd2ca612b428c77fb0d4a00c4c0cc0a807a
 
     @Override
     public int getItemCount() { return dataset.size(); }
