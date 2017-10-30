@@ -7,6 +7,8 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="actionBarWidgetTheme">@color/colorAccent</item>
+        <item name="android:buttonStyle">@style/ButtonTheme</item>
+
     </style>
 
     <style name="FormStyle">
@@ -28,6 +30,8 @@
         <item name="android:padding">8dp</item>
     </style>
 
-
+<style name="ButtonTheme" parent="Widget.AppCompat.Button">
+<item name="android:textColor">#ffffff</item>
+</style>
 
 </resources>

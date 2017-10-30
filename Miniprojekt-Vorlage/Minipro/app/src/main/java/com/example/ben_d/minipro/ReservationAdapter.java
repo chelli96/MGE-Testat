@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.ben_d.minipro.domain.Gadget;
@@ -14,6 +15,9 @@ import java.util.List;
 
 public class ReservationAdapter extends RecyclerView.Adapter<ReservationViewHolder> {
     private ArrayList<Reservation> dataset;
+    private ReservationViewHolder reserve;
+    private ReservationHandler handler;
+
 
     private List<Reservation> reservationList;
 
@@ -26,14 +30,24 @@ public class ReservationAdapter extends RecyclerView.Adapter<ReservationViewHold
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View v = layoutInflater.inflate(R.layout.rowlayout_reservation, parent, false);
         TextView gadgetName = v.findViewById(R.id.rvGadgetName);
-        return new ReservationViewHolder(v, gadgetName);
+        ImageButton deleteButton = v.findViewById(R.id.deleteButton);
+        return new ReservationViewHolder(v, gadgetName, deleteButton);
     }
 
     @Override
-    public void onBindViewHolder(ReservationViewHolder holder, int position) {
+    public void onBindViewHolder(ReservationViewHolder holder, final int position) {
         final Reservation reservation = dataset.get(position);
 
         holder.rvGadgetName.setText(reservation.getGadget().getName());
+
+        reserve.deleteButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                handler.deleteReservation(reservation);
+            }
+        });
 
     }
 
