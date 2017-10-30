@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorPrimary">
+    android:layout_height="match_parent">
 
 
     <LinearLayout
@@ -14,7 +13,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <ImageButton
+        <ImageButton
 
         android:id="@+id/loan"
         android:layout_width="match_parent"
@@ -23,16 +22,16 @@
         android:background="@null"
         app:srcCompat="@drawable/smartphone1" />
 
-    <ImageButton
+        <ImageButton
 
-        android:id="@+id/reservation"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:background="@null"
-        app:srcCompat="@drawable/calendar" />
+            android:id="@+id/reservation"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:background="@null"
+            app:srcCompat="@drawable/calendar" />
 
-</LinearLayout>
+    </LinearLayout>
 
 
 

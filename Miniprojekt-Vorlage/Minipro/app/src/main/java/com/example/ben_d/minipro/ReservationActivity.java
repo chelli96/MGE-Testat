@@ -61,11 +61,6 @@ public class ReservationActivity extends AppCompatActivity implements NewReserva
 
         newReservation = (FloatingActionButton) findViewById(R.id.AddNewReservation);
 
-
-
-
-
-
         getMyReservations();
     }
 

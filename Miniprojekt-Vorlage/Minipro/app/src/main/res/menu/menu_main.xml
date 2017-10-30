@@ -6,6 +6,6 @@
     tools:context=".MainActivity">
 
     <item android:id="@+id/action_logout"
-        android:title="Logout"/>
+        android:title="Logout" />
 
 </menu>
