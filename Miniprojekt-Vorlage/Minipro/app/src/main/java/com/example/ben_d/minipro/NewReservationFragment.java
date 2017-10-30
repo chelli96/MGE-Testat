@@ -14,6 +14,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.ben_d.minipro.domain.Gadget;
+import com.example.ben_d.minipro.domain.Reservation;
 import com.example.ben_d.minipro.service.Callback;
 import com.example.ben_d.minipro.service.LibraryService;
 
@@ -109,12 +110,15 @@ public class NewReservationFragment extends DialogFragment {
             LibraryService.reserveGadget(gadget, new Callback<Boolean>() {
                 @Override
                 public void onCompletion(Boolean input) {
-                    callback.onReservationCompletion(gadget, input);
+                    callback.onReservationCompletion(gadget, true);
+
+
                 }
+
 
                 @Override
                 public void onError(String message) {
-                    callback.onReservationError(message);
+                callback.onReservationError("Reservation failed");
                 }
             });
         } else {
@@ -123,8 +127,8 @@ public class NewReservationFragment extends DialogFragment {
     }
 
     public interface NewReservationDialogListener {
-        public void onReservationCompletion(Gadget gadget, boolean success);
+         void onReservationCompletion(Gadget gadget, boolean success);
 
-        public void onReservationError(String message);
+         void onReservationError(String message);
     }
 }

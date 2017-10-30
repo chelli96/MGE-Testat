@@ -15,6 +15,8 @@ import java.util.List;
 public class ReservationAdapter extends RecyclerView.Adapter<ReservationViewHolder> {
     private ArrayList<Reservation> dataset;
 
+    private List<Reservation> reservationList;
+
     public ReservationAdapter(ArrayList<Reservation> reservations) {
         dataset = reservations;
     }
@@ -50,6 +52,10 @@ public class ReservationAdapter extends RecyclerView.Adapter<ReservationViewHold
 
     public static String formatPrice(double price){
         return String.format("Fr. %.2f", price);
+    }
+
+    public void setReservations(List<Reservation> reservationList) {
+        this.reservationList = reservationList;
     }
 }
 

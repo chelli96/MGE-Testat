@@ -2,6 +2,7 @@ package com.example.ben_d.minipro;
 
 import android.app.DialogFragment;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -10,17 +11,23 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.ben_d.minipro.domain.Gadget;
+import com.example.ben_d.minipro.domain.Loan;
 import com.example.ben_d.minipro.domain.Reservation;
 import com.example.ben_d.minipro.service.Callback;
 import com.example.ben_d.minipro.service.LibraryService;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
+import static com.example.ben_d.minipro.R.id.loanOverview;
 import static com.example.ben_d.minipro.R.id.rvReservations;
 
 /**
@@ -97,20 +104,22 @@ public class ReservationActivity extends AppCompatActivity implements NewReserva
         dialog.show(getFragmentManager(), "NewReservationFragment");
     }
 
+
     @Override
     public void onReservationCompletion(Gadget gadget, boolean success) {
         if (success) {
             Toast.makeText(this, String.format("%s is reserved successfully", gadget.getName()), Toast.LENGTH_LONG).show();
-            getMyReservations();
-            Snackbar.make(view, "Success", 1500 );
             reservationAdapter.notifyDataSetChanged();
+            reservation.clear();
+            getMyReservations();
+
         } else {
 
             Toast.makeText(this, "Reservation Failed", Toast.LENGTH_LONG);
-           // Snackbar.make(rvReservations,
-                  //  String.format("Reservation failed for %s", gadget.getName()),
-                  //  Snackbar.LENGTH_INDEFINITE).show();
+
         }
+
+
     }
 
     @Override
@@ -119,8 +128,5 @@ public class ReservationActivity extends AppCompatActivity implements NewReserva
         Toast.makeText(this, "Reservation Failed", Toast.LENGTH_LONG);
 
     }
-
-
-
 
 }
