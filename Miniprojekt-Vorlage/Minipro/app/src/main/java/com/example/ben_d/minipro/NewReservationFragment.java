@@ -118,7 +118,7 @@ public class NewReservationFragment extends DialogFragment {
 
                 @Override
                 public void onError(String message) {
-                callback.onReservationError("Reservation failed");
+                    callback.onReservationError(message);
                 }
             });
         } else {

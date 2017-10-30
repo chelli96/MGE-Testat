@@ -107,15 +107,21 @@ public class ReservationActivity extends AppCompatActivity implements NewReserva
 
     @Override
     public void onReservationCompletion(Gadget gadget, boolean success) {
-        if (success) {
+        if (success && reservation.size() <= 2) {
             Toast.makeText(this, String.format("%s is reserved successfully", gadget.getName()), Toast.LENGTH_LONG).show();
             reservationAdapter.notifyDataSetChanged();
             reservation.clear();
             getMyReservations();
 
-        } else {
+        } else if(reservation.size() > 2) {
 
-            Toast.makeText(this, "Reservation Failed", Toast.LENGTH_LONG);
+            Toast.makeText(this, String.format("Failed to reserve %s, you have already reserved 3 items", gadget.getName()), Toast.LENGTH_LONG).show();
+
+        }
+
+        else{
+
+            Toast.makeText(this, String.format("Failed to reserve %s", gadget.getName()), Toast.LENGTH_LONG).show();
 
         }
 
