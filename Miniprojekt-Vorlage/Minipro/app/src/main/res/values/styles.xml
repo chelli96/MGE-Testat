@@ -8,4 +8,22 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="FormStyle">
+        <item name="android:height">32dp</item>
+        <item name="android:minWidth">200dp</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="LoginStyle">
+        <item name="android:background">?colorAccent</item>
+        <item name="android:height">32dp</item>
+        <item name="android:minWidth">200dp</item>
+        <item name="android:padding">2dp</item>
+    </style>
+
+    <style name="ReservationButton">
+        <item name="android:height">32dp</item>
+        <item name="android:minWidth">200dp</item>
+        <item name="android:padding">8dp</item>
+    </style>
 </resources>

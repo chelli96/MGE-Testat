@@ -1,95 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
 
 
     <TextView
         android:id="@+id/Registration"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Registration"
-        android:textSize="27sp"
-        android:layout_marginBottom="4dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginBottom="40dp"
         android:layout_marginLeft="4dp"
-        android:textStyle="bold"
-         />
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="cursive"
+        android:text="Registration"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/NeuerName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginLeft="4dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
+        android:fontFamily="cursive"
         android:hint="Ihr Name"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textAlignment="center" />
 
     <EditText
         android:id="@+id/NeueEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginLeft="4dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
+        android:fontFamily="cursive"
         android:hint="Ihre HSR-Mail Adresse"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:textAlignment="center" />
 
     <EditText
         android:id="@+id/NeueMatrikelnummer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginLeft="4dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
+        android:fontFamily="cursive"
         android:hint="Ihre Martrikelnummer"
-        android:inputType="number" />
+        android:inputType="number"
+        android:textAlignment="center" />
 
     <EditText
         android:id="@+id/NeuesPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginLeft="4dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
+        android:fontFamily="cursive"
         android:hint="Ihr Passwort eingeben"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:textAlignment="center" />
 
     <Button
         android:id="@+id/neuRegistrieren"
+        style="@style/LoginStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="5dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:text="Registrieren" />
 
     <TextView
 
         android:id="@+id/backToLogin"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="5dp"
+        android:clickable="true"
+        android:fontFamily="cursive"
         android:text="Sie sind schon registiert? Hier geht's zum Login!"
-        android:textSize="15sp"
-        android:clickable="true" />
+        android:textAlignment="center"
+        android:textSize="15sp" />
 
 </LinearLayout>
