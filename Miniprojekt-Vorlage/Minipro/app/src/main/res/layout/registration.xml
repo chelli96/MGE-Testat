@@ -85,7 +85,8 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
-        android:text="Registrieren" />
+        android:text="Registrieren"
+        android:textColor="#ffffff"/>
 
     <TextView
 

@@ -41,7 +41,7 @@ public class LoanAdapter extends RecyclerView.Adapter<LoanViewHolder> {
             holder.gadgetName.setText(loan.getGadget().getName());
 
             Date returnDate = loan.overDueDate();
-            SimpleDateFormat dateFormat = new SimpleDateFormat("dd.mm.yyyy");
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMM yyyy");
 
 
             if (returnDate != null) {
