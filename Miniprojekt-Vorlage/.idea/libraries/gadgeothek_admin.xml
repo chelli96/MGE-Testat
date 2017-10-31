@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="gadgeothek-admin">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/Miniprojekt-Admin-master/gadgeothek-admin.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
